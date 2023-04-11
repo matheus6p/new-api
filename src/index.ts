@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import fastifyCors from "@fastify/cors";
+import cors from "@fastify/cors";
 import { db } from "./config/db";
 import { itemRoutes } from "./routes/ItemRoutes";
 
@@ -9,7 +9,7 @@ db.once("open", () =>
 );
 
 const server = fastify();
-server.register(fastifyCors, {
+server.register(cors, {
   origin: true,
   allowedHeaders: [
     "Origin",
