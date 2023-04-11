@@ -8,9 +8,6 @@ export async function getAllItems(
   req: FastifyRequest,
   res: FastifyReply
 ): Promise<ItemModel[]> {
-  req.headers = {
-    "Access-Control-Allow-Origin": "*",
-  };
   try {
     const items = await itemService.getAllItems();
     return res.status(200).send(items);
