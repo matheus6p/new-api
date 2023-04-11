@@ -10,10 +10,10 @@ db.once("open", () =>
 
 const server = fastify();
 server.register(fastifyCors, {
-  origin: '*',
-  methods: 'GET,PUT,POST,DELETE',
+  origin: "*",
+  methods: "GET,PUT,POST,DELETE",
   preflightContinue: false,
-  optionsSuccessStatus: 204
+  optionsSuccessStatus: 204,
 });
 server.register(itemRoutes);
 
