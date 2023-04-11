@@ -10,16 +10,10 @@ db.once("open", () =>
 
 const server = fastify();
 server.register(cors, {
-  origin: true,
-  allowedHeaders: [
-    "Origin",
-    "X-Requested-With",
-    "Accept",
-    "Content-Type",
-    "Authorization",
+  origin: [
+    "http://localhost:3333",
+    "https://shop-list-new-api-production.up.railway.app",
   ],
-  methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
-  credentials: true,
 });
 server.register(itemRoutes);
 
