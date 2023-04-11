@@ -18,7 +18,6 @@ server.register(cors, {
     "Content-Type",
     "Authorization",
   ],
-  methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
 });
 server.register(itemRoutes);
 
