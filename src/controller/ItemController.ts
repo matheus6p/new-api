@@ -8,6 +8,11 @@ export async function getAllItems(
   req: FastifyRequest,
   res: FastifyReply
 ): Promise<ItemModel[]> {
+  req.headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type"
+  }
   try {
     const items = await itemService.getAllItems();
     return res.status(200).send(items);
