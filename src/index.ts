@@ -9,12 +9,7 @@ db.once("open", () =>
 );
 
 const server = fastify();
-server.register(cors, {
-  origin: [
-    "http://localhost:3333",
-    "https://shop-list-new-api-production.up.railway.app",
-  ],
-});
+server.register(cors)
 server.register(itemRoutes);
 
 server.listen({ port: 3333 }, (err, address) => {
