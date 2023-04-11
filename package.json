@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node tsc src/index.ts",
+    "start": "tsc src/index.ts",
     "dev": "tsx watch src/index.ts"
   },
   "keywords": [],
