@@ -12,7 +12,7 @@ const server = fastify();
 server.register(fastifyCors, {
   origin: true,
   methods: ["GET", "PUT", "POST", "DELETE"],
-  allowedHeaders: ['Content-Type', 'Application/json']
+  allowedHeaders: ["Access-Control-Allow-Origin", "*"],
 });
 server.register(itemRoutes);
 
