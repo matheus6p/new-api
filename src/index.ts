@@ -9,17 +9,17 @@ db.once("open", () =>
 );
 
 const server = fastify();
-// server.register(fastifyCors, {
-//   origin: true,
-//   allowedHeaders: [
-//     "Origin",
-//     "X-Requested-With",
-//     "Accept",
-//     "Content-Type",
-//     "Authorization",
-//   ],
-//   methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
-// });
+server.register(fastifyCors, {
+  origin: true,
+  allowedHeaders: [
+    "Origin",
+    "X-Requested-With",
+    "Accept",
+    "Content-Type",
+    "Authorization",
+  ],
+  methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
+});
 server.register(itemRoutes);
 
 server.listen({ port: 3333 }, (err, address) => {
