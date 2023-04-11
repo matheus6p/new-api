@@ -9,10 +9,7 @@ db.once("open", () =>
 );
 
 const server = fastify();
-server.register(fastifyCors, {
-  origin: true,
-  methods: "GET,PUT,POST,DELETE",
-});
+server.register(fastifyCors);
 server.register(itemRoutes);
 
 server.listen({ port: 3333 }, (err, address) => {
