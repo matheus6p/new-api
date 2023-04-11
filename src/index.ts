@@ -9,6 +9,7 @@ db.once("open", () =>
 );
 
 const server = fastify();
+
 server.register(cors)
 server.register(itemRoutes);
 
