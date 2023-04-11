@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx src/index.ts",
+    "build": "tsup src",
     "dev": "tsx watch src/index.ts"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "dotenv": "^16.0.3",
     "fastify": "^4.15.0",
     "fastify-cors": "^6.1.0",
-    "mongoose": "^7.0.3"
+    "mongoose": "^7.0.3",
+    "tsup": "^6.7.0"
   }
 }
