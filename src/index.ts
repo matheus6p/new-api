@@ -8,12 +8,12 @@ db.once("open", () =>
   console.log("Conexão com banco de dados foi bem-sucedida")
 );
 
-const server = fastify();
+const app = fastify();
 
-server.register(cors, { origin: true });
-server.register(itemRoutes);
+app.register(cors, { origin: true });
+app.register(itemRoutes);
 
-server.listen({ port: 3333 }, (err, address) => {
+app.listen({ port: 3333 }, (err, address) => {
   if (err) {
     console.error(err);
     process.exit(1);
