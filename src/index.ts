@@ -13,7 +13,7 @@ const app = fastify();
 app.register(cors, { origin: true });
 app.register(itemRoutes);
 
-app.listen({ port: 3333 }, (err, address) => {
+app.listen({ host: '0.0.0.0', port: process.env.PORT ? Number(process.env.PORT) : 3333}, (err, address) => {
   if (err) {
     console.error(err);
     process.exit(1);
