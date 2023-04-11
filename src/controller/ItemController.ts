@@ -10,6 +10,7 @@ export async function getAllItems(
 ): Promise<ItemModel[]> {
   try {
     const items = await itemService.getAllItems();
+    res.header('Access-Control-Allow-Origin', '*');
     return res.status(200).send(items);
   } catch (err: any) {
     return res.status(500).send({ message: "Cannot load content", error: err.message });
