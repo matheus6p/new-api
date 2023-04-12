@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dist/index.cjs",
+  "main": "dist/server.cjs",
   "scripts": {
-    "start": "node dist/index.cjs",
+    "start": "node dist/server.cjs",
     "build": "tsup src",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/server.ts"
   },
   "keywords": [],
   "author": "",
