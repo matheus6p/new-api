@@ -14,7 +14,7 @@ const app = fastify();
 app.register(express);
 app.use(cors, {
   origin: "https://shop-list-kappa.vercel.app",
-  methods: ["GET", "PUT", "POST", "DELETE"],
+  methods: "GET, PUT, POST, UPDATE, DELETE",
   allowedHeaders: ["Content-Type"],
   exposedHeaders: ["Content-Disposition"],
 });
