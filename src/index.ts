@@ -12,7 +12,12 @@ db.once("open", () =>
 const app = fastify();
 
 app.register(express);
-app.use(cors);
+app.use(cors, {
+  origin: "https://shop-list-kappa.vercel.app",
+  methods: ["GET", "PUT", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type"],
+  exposedHeaders: ["Content-Disposition"],
+});
 // app.register(cors, { origin: true });
 app.register(itemRoutes);
 
